@@ -1,0 +1,35 @@
+name: Refresh Dario Amodei
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: dario-feed
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      RSS_REPO_SLUG: ckqqqq/rss-feeds
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - uses: astral-sh/setup-uv@v10.0.1
+      - run: uv sync --frozen
+      - run: PYTHONPATH=feed_generators uv run python -m unittest discover -s tests -p test_darioamodei.py
+      - run: uv run feed_generators/darioamodei_blog.py
+      - name: Save verified feed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add feeds/feed_darioamodei.xml
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh Dario Amodei RSS'
+            git pull --rebase
+            git push
+          fi

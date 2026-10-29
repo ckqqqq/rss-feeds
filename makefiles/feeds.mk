@@ -319,3 +319,7 @@ clean_feeds: ## Clean generated RSS feed files
 	$(call print_warning,Removing generated RSS feeds)
 	$(Q)rm -rf feeds/*.xml
 	$(call print_success,RSS feeds removed)
+
+.PHONY: feeds_darioamodei
+feeds_darioamodei: ## Generate RSS feed for Dario Amodei
+	$(Q)uv run feed_generators/darioamodei_blog.py

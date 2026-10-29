@@ -71,6 +71,11 @@ feeds:
     type: requests
     blog_url: https://cursor.com/blog
 
+  darioamodei:
+    script: darioamodei_blog.py
+    type: requests
+    blog_url: https://darioamodei.com/
+
   dagster:
     script: dagster_blog.py
     type: requests

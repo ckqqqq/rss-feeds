@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Dario Amodei — Essays and Short Posts</title>
+    <link>https://darioamodei.com/</link>
+    <description>First-party articles by Dario Amodei. Publication dates have month precision.</description>
+    <atom:link href="https://raw.githubusercontent.com/ckqqqq/rss-feeds/main/feeds/feed_darioamodei.xml" rel="self"/>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 29 Oct 2026 02:16:37 +0000</lastBuildDate>
+    <item>
+      <title>We Must Pace the Frontier</title>
+      <link>https://darioamodei.com/post/we-must-pace-the-frontier</link>
+      <description>By Dario Amodei. Source publication month: September 2026. RSS date is normalized to the first day; the exact day is not supplied.</description>
+      <guid isPermaLink="false">https://darioamodei.com/post/we-must-pace-the-frontier</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Policy on the AI Exponential</title>
+      <link>https://darioamodei.com/post/policy-on-the-ai-exponential</link>
+      <description>By Dario Amodei. Source publication month: June 2026. RSS date is normalized to the first day; the exact day is not supplied.</description>
+      <guid isPermaLink="false">https://darioamodei.com/post/policy-on-the-ai-exponential</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Adolescence of Technology</title>
+      <link>https://darioamodei.com/essay/the-adolescence-of-technology</link>
+      <description>By Dario Amodei. Source publication month: January 2026. RSS date is normalized to the first day; the exact day is not supplied.</description>
+      <guid isPermaLink="false">https://darioamodei.com/essay/the-adolescence-of-technology</guid>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Urgency of Interpretability</title>
+      <link>https://darioamodei.com/post/the-urgency-of-interpretability</link>
+      <description>By Dario Amodei. Source publication month: April 2025. RSS date is normalized to the first day; the exact day is not supplied.</description>
+      <guid isPermaLink="false">https://darioamodei.com/post/the-urgency-of-interpretability</guid>
+      <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>On DeepSeek and Export Controls</title>
+      <link>https://darioamodei.com/post/on-deepseek-and-export-controls</link>
+      <description>By Dario Amodei. Source publication month: January 2025. RSS date is normalized to the first day; the exact day is not supplied.</description>
+      <guid isPermaLink="false">https://darioamodei.com/post/on-deepseek-and-export-controls</guid>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Machines of Loving Grace</title>
+      <link>https://darioamodei.com/essay/machines-of-loving-grace</link>
+      <description>By Dario Amodei. Source publication month: October 2024. RSS date is normalized to the first day; the exact day is not supplied.</description>
+      <guid isPermaLink="false">https://darioamodei.com/essay/machines-of-loving-grace</guid>
+      <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
