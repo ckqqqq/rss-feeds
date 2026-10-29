@@ -1,5 +1,6 @@
 """Dario's first-party essays and short posts, with explicit month precision."""
 
+import os
 import sys
 from datetime import UTC, datetime
 from email.utils import parsedate_to_datetime
@@ -54,6 +55,7 @@ def generate_rss_feed(posts):
     feed.title("Dario Amodei — Essays and Short Posts")
     feed.description("First-party articles by Dario Amodei. Publication dates have month precision.")
     feed.language("en")
+    os.environ.setdefault("RSS_REPO_SLUG", "ckqqqq/rss-feeds")
     setup_feed_links(feed, BLOG_URL, FEED_NAME)
     for post in posts:
         entry = feed.add_entry()
