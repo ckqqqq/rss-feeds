@@ -27,6 +27,12 @@ dependencies = [
 [project.urls]
 Repository = "https://github.com/Olshansk/rss-feeds"
 
+[project.optional-dependencies]
+translation = [
+    "ctranslate2>=4.8.4",
+    "sentencepiece>=0.2.2",
+]
+
 [dependency-groups]
 dev = ["ruff>=0.16.3", "pre-commit>=4.6.2"]
 

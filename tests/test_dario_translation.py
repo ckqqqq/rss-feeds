@@ -3,7 +3,7 @@
 import unittest
 from unittest.mock import Mock, patch
 
-from translate_dario import translate
+from translate_rss_titles import translate
 
 
 class TranslationTests(unittest.TestCase):
@@ -14,7 +14,7 @@ class TranslationTests(unittest.TestCase):
             "quotaFinished": False,
             "responseData": {"translatedText": "科技的青春期"},
         }
-        with patch("translate_dario.requests.get", return_value=response) as request:
+        with patch("translate_rss_titles.requests.get", return_value=response) as request:
             self.assertEqual(translate("The Adolescence of Technology"), "科技的青春期")
             self.assertEqual(request.call_args.kwargs["params"]["langpair"], "en|zh-CN")
 
@@ -26,5 +26,5 @@ class TranslationTests(unittest.TestCase):
         ]:
             response = Mock()
             response.json.return_value = result
-            with patch("translate_dario.requests.get", return_value=response), self.assertRaises(ValueError):
+            with patch("translate_rss_titles.requests.get", return_value=response), self.assertRaises(ValueError):
                 translate("Example")
