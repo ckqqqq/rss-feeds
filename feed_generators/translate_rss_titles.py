@@ -55,7 +55,7 @@ def main():
         titles.setdefault(url, english or title)
     for index, (url, title) in enumerate(titles.items(), 1):
         cached = items.get(url, {})
-        if cached.get("title_en") == title:
+        if cached.get("title_en") == title and cached.get("title_zh"):
             continue
         if args.engine == "local":
             if local is None:

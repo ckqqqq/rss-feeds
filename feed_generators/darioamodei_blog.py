@@ -1,5 +1,6 @@
 """Dario's first-party essays and short posts, with explicit month precision."""
 
+import argparse
 import os
 import sys
 from datetime import UTC, datetime
@@ -67,7 +68,7 @@ def generate_rss_feed(posts):
     return feed
 
 
-def main():
+def main(full=False):
     try:
         posts = {}
         existing = get_feeds_dir() / f"feed_{FEED_NAME}.xml"
@@ -82,6 +83,8 @@ def main():
                     "date": parsedate_to_datetime(item.findtext("pubDate")),
                 }
         for url, title in parse_links(fetch_page(BLOG_URL)).items():
+            if not full and url in posts and posts[url]["title"] == title:
+                continue
             posts[url] = parse_article(fetch_page(url), url, title)
         save_rss_feed(generate_rss_feed(list(posts.values())), FEED_NAME)
         logger.info("Verified %s Dario articles", len(posts))
@@ -92,4 +95,6 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(0 if main() else 1)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--full", action="store_true", help="Revalidate existing article metadata as well")
+    sys.exit(0 if main(full=parser.parse_args().full) else 1)

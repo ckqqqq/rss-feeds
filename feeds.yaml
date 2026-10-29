@@ -72,6 +72,8 @@ feeds:
     blog_url: https://cursor.com/blog
 
   darioamodei:
+    # Refreshed directly by the two-day incremental automation, not the hourly bulk job.
+    enabled: false
     script: darioamodei_blog.py
     type: requests
     blog_url: https://darioamodei.com/

@@ -1,7 +1,6 @@
 name: Refresh Dario Amodei
 on:
-  schedule:
-    - cron: '17 * * * *'
+  # Scheduled refresh is owned by the two-day Codex automation.
   workflow_dispatch:
 permissions:
   contents: write
